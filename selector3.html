@@ -1,0 +1,70 @@
+<html>
+
+<body>
+    <style>
+        button {
+            padding: 10px;
+            border: 1px solid black;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover { /*마우스 가져다 대면 나타나는 이펙트*/
+            background-color: yellow;
+        }
+
+        button:active { /*버튼 눌렀을때 나타나는 이펙트*/
+            background-color: green;
+        }
+
+         button:focus { /*버튼 눌렀을때 그림자 */
+            outline: none;
+            box-shadow: 0 0 5px blue;
+        }
+
+        .box::before {
+            content: "→";
+            color: red;
+        }
+
+        .box::after {
+            content: "<<";
+            color: red;
+        }
+
+        button:last-child::before {
+            content: "👉";
+            margin-right: 5px;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        li:last-child {
+            color: red;
+        }
+
+        li:nth-child(2) {
+            background-color: blue;
+        }
+    </style>
+
+    <div>
+        <ul>
+            <li>야근은 필요하지만 하면 안됩니다</li>
+            <li>야근은 필요하지만 하면 안됩니다</li>
+            <li>야근은 필요하지만 하면 안됩니다</li>
+            <li>야근은 필요하지만 하면 안됩니다</li>
+            <li>야근은 필요하지만 하면 안됩니다</li>
+            <li>야근은 필요하지만 하면 안됩니다</li>
+            <li>야근은 필요하지만 하면 안됩니다</li>
+        </ul>
+        <p class="box">This is box class</p>
+        <button>Hover me</button>
+        <button>Click me</button>
+    </div>
+
+</body>
+
+</html>
